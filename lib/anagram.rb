@@ -9,20 +9,32 @@ class Anagram
    @word = word
   end
   
-  #How will you determine if one word is an anagram for another
+  def match(array)
+    matches = []
+
+    array.each do |e|
+      if e.split("").sort ==  @word.split("").sort
+        matches << e
+      end
+      matches
+    end 
+
+  end#How will you determine if one word is an anagram for another
   
   #break each word down into letter elements and then sort them and compare for a match
   
-  def match(array)
-    array.each do |w|
-        w.scan /\w/
-        
-    end  
+    def match(array)
+    matches = []
+
+    array.each do |e|
+      if e.split("").sort ==  @word.split("").sort
+        matches << e
+      end
+      matches
+    end 
+
   end
   
 end
 
 
-words = [bad, rad, dad, mad]
-
-sad = Anagram.new("sad")
